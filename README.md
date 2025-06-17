@@ -20,20 +20,7 @@
 ### Before
 
 ```php
-$array = [
-    "name" => "mohamed",
-    "age"  => 25,
-
-    "data" => [
-        "email"        => "test@example.com",
-        "phone-number" => "1234567890",
-
-        "address"     => [
-            "city"    => "Cairo",
-            "country" => "Egypt"
-        ],
-    ]
-];
+<?php
 
 class User {
     private string $name = "mohamed";
@@ -42,18 +29,82 @@ class User {
     public function __construct(
         private string $email = "",
         private string $phoneNumber = "",
-    ) {}
+    ) {
+    }
+    
+    public function process(
+        string $name = "",
+        string $email = "",
+        string $phoneNumber = "",
+        int $age = 0,
+    ): void {
+        $name1 = "1";
+        $phone23 = "dsdS";
+
+        $name234 = "2";
+        $phone234 = "dsdS";
+    }
+}
+
+const PI = 3.14;
+const NAME = "mohamed";
+
+$array = [
+    "name" => "mohamed",
+    "age" => 25,
+
+    "data"                  => [
+        "email" => "test@example.com",
+        "phone-number" => "1234567890",
+
+        "address"           => [
+            "city" => "Cairo",
+            "country" => "Egypt"
+        ],
+    ]
+];
+
+enum Status: int {
+    case Active = 1;
+    case Inactive = 0;
 }
 ```
 
 ### After (aligned)
 
 ```php
-$array = [
-    "name"          => "mohamed",
-    "age"           => 25,
+class User {
+    private string $name = "mohamed";
+    private int $age     = 25;
 
-    "data"          => [
+    public function __construct(
+        private string $email       = "",
+        private string $phoneNumber = "",
+    ) {
+    }
+    
+    public function process(
+        string $name        = "",
+        string $email       = "",
+        string $phoneNumber = "",
+        int $age            = 0,
+    ): void {
+        $name1   = "1";
+        $phone23 = "dsdS";
+
+        $name234  = "2";
+        $phone234 = "dsdS";
+    }
+}
+
+const PI   = 3.14;
+const NAME = "mohamed";
+
+$array = [
+    "name" => "mohamed",
+    "age"  => 25,
+
+    "data" => [
         "email"        => "test@example.com",
         "phone-number" => "1234567890",
 
@@ -64,14 +115,9 @@ $array = [
     ]
 ];
 
-class User {
-    private string $name = "mohamed";
-    private int    $age  = 25;
-
-    public function __construct(
-        private string $email       = "",
-        private string $phoneNumber = "",
-    ) {}
+enum Status: int {
+    case Active   = 1;
+    case Inactive = 0;
 }
 ```
 
