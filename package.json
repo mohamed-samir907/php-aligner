@@ -1,12 +1,12 @@
 {
   "name": "php-aligner",
-  "displayName": "php-aligner",
-  "description": "PHP Code Aligner",
+  "displayName": "PHP Aligner",
+  "description": "PHP Code Aligner, automatically aligns your PHP code for better readability and consistency.",
   "publisher": "mohamed-samir907",
   "icon": "icon.png",
   "version": "1.0.0",
   "engines": {
-    "vscode": "^1.100.0"
+    "vscode": "^1.76.0"
   },
   "categories": [
     "Other",
@@ -62,7 +62,7 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.101.0",
+    "@types/vscode": "^1.76.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "20.x",
     "@typescript-eslint/eslint-plugin": "^8.31.1",
